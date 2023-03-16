@@ -1,22 +1,26 @@
 /** @format */
 
-const white = '#fff';
+const white = '#F9F9FB';
 const black = '#000';
-const dark = '#1E1E1E';
+const dark = '#313234';
 const green = '#89B601';
 const gray = '#9A9A9A';
-const yellow = '#FFD747';
+const red = '#F26C68';
+const yellow = '#F5CA48';
+const orange= '#E4723C';
+const graay= '#CDCDCD';
 
 const StyleGuide = {
   colors: {
-    darkText: black,
-    text: dark,
+    primary: yellow,
+    secondary: red,
     background: white,
-    primary: green,
+    price: orange,
+    darkText: dark,
+    text: graay,
     onPrimary: white,
     border: gray,
     borderWithOpacity: 'rgba(154,154,154,0.45)',
-    secondary: yellow,
     gray: gray,
   },
   
