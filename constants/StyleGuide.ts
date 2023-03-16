@@ -37,8 +37,14 @@ const StyleGuide = {
     fontFamily: 'Poppins-Bold',
     fontSize: hp(2.2),
   },
-  frjb:{
-    flexDirection: 'row',justifyContent: 'space-between', 
+  text: {
+    color: dark,
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: hp(1.8),
+  },
+  frjb: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
 };
 
