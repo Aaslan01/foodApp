@@ -34,7 +34,7 @@ function App() {
             options={{header: () => null}}
           />
           <Stack.Screen
-            name="LoginScreen"
+            name="DetailScreen"
             component={DetailScreen}
             options={{header: () => null}}
           />

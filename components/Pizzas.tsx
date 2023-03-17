@@ -1,4 +1,4 @@
-import {View, Text, ScrollView, Image} from 'react-native';
+import {View, Text, ScrollView, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {products} from '../data';
 import {
@@ -6,11 +6,18 @@ import {
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
 import StyleGuide from '../constants/StyleGuide';
+import {useNavigation} from '@react-navigation/native';
 const Pizzas = () => {
+  const navigation = useNavigation();
   return (
     <View>
       {products.map((item, index) => (
-        <View
+        <TouchableOpacity
+          onPress={() =>
+            navigation.navigate('DetailScreen', {
+              item: item,
+            })
+          }
           style={[
             StyleGuide.frjb,
             {
@@ -51,14 +58,13 @@ const Pizzas = () => {
                 {
                   marginTop: hp(2),
                   alignItems: 'center',
-                  justifyContent: 'space-between',
                 },
               ]}>
-              <View
+              <TouchableOpacity
                 style={[
                   StyleGuide.acjc,
                   {
-                    height: hp(5.5),
+                    height: hp(5),
                     width: wp(22),
                     backgroundColor: StyleGuide.colors.primary,
                     borderBottomLeftRadius: 25,
@@ -69,16 +75,17 @@ const Pizzas = () => {
                   style={StyleGuide.iconSize}
                   source={require('../assets/images/icons/plus.png')}
                 />
-              </View>
-              <View style={StyleGuide.fr}>
+              </TouchableOpacity>
+              <View
+                style={[StyleGuide.fr, StyleGuide.acjc, {marginLeft: wp(4)}]}>
                 <Image
                   style={StyleGuide.iconSize}
                   source={require('../assets/images/icons/star.png')}
                 />
                 <Text
                   style={{
-                    color: StyleGuide.colors.gray,
-                    paddingLeft: wp(4),
+                    color: StyleGuide.colors.darkText,
+                    marginLeft: wp(0.5),
                     fontSize: 14,
                   }}>
                   {item.rating}
@@ -86,8 +93,17 @@ const Pizzas = () => {
               </View>
             </View>
           </View>
-          {/* <Image source={item.image}/> */}
-        </View>
+          <Image
+            style={{
+              width: wp(60),
+              height: hp(20),
+              resizeMode: 'contain',
+              right: -wp(14),
+              alignSelf: 'center',
+            }}
+            source={item.image}
+          />
+        </TouchableOpacity>
       ))}
     </View>
   );
