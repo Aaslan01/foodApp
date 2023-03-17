@@ -60,9 +60,6 @@ const DetailScreen = () => {
             {space()}
             <Text style={StyleGuide.textSecondar}>Delivery time</Text>
             <Text style={[StyleGuide.text]}>{params.item.time} min</Text>
-            <Text style={[StyleGuide.text, {marginTop: hp(4)}]}>
-              Ingredients
-            </Text>
           </View>
           <Image
             style={{
@@ -75,22 +72,23 @@ const DetailScreen = () => {
             source={params.item.image}
           />
         </View>
-        {space()}
+        <Text style={[StyleGuide.text, {marginTop: hp(7)}]}>Ingredients</Text>
         <Ingredients ingradients={params.item.ingredients} />
-        <View style={{marginTop: hp(4)}} />
+        <View style={{marginTop: hp(7)}} />
         <TouchableOpacity
-          style={[{
-            width: wp(92),
-            backgroundColor: StyleGuide.colors.primary,
-            padding: wp(4),
-            borderRadius: 50,
-            flexDirection: 'row',
-          },
-          StyleGuide.acjc
+          style={[
+            {
+              width: wp(92),
+              backgroundColor: StyleGuide.colors.primary,
+              padding: wp(4),
+              borderRadius: 50,
+              flexDirection: 'row',
+            },
+            StyleGuide.acjc,
           ]}>
           <Text style={[StyleGuide.text, {fontSize: 14}]}>Place the order</Text>
           <Image
-            style={{width: 5, height: 8, marginLeft:wp(2) }}
+            style={{width: 5, height: 8, marginLeft: wp(2)}}
             source={require('../assets/images/icons/VectorR.png')}
           />
         </TouchableOpacity>
@@ -103,5 +101,5 @@ export default DetailScreen;
 
 // hp2 space
 function space() {
-  return <View style={{marginTop: hp(2)}} />;
+  return <View style={{marginTop: hp(3)}} />;
 }

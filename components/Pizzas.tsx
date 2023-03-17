@@ -13,11 +13,6 @@ const Pizzas = () => {
     <View>
       {products.map((item, index) => (
         <TouchableOpacity
-          onPress={() =>
-            navigation.navigate('DetailScreen', {
-              item: item,
-            })
-          }
           style={[
             StyleGuide.frjb,
             {
@@ -62,6 +57,11 @@ const Pizzas = () => {
                 },
               ]}>
               <TouchableOpacity
+                onPress={() =>
+                  navigation.navigate('DetailScreen', {
+                    item: item
+                  })
+                }
                 style={[
                   StyleGuide.acjc,
                   {
