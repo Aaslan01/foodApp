@@ -42,10 +42,18 @@ const StyleGuide = {
     fontFamily: 'Poppins-SemiBold',
     fontSize: hp(1.8),
   },
+  fr:{
+    flexDirection: 'row',
+  },
   frjb: {
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+  acjc: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  iconSize:{height: 10, width: 10}
 };
 
 export default StyleGuide;
