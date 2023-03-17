@@ -28,6 +28,7 @@ export const categories: Category[] = [
 ];
 
 export interface Ingredients {
+    [x: string]: any;
     id: number;
     image: ImageSourcePropType
   }
@@ -73,7 +74,7 @@ export const products: Product[] = [
     size: "Medium 14",
     crust: "Thin Crust",
     time: 20,
-    ingredients: ingredients,
+    ingredients,
     image: require("../assets/images/pizza1.png"),
     rating: 5.0,
   },

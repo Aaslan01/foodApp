@@ -27,6 +27,7 @@ const StyleGuide = {
     borderWithOpacity: 'rgba(154,154,154,0.45)',
     gray: gray,
   },
+  price:{color: orange,},
   textHeadingPrimary: {
     color: dark,
     fontFamily: 'Poppins-Bold',
@@ -41,6 +42,11 @@ const StyleGuide = {
     color: dark,
     fontFamily: 'Poppins-SemiBold',
     fontSize: hp(1.8),
+  },
+  textSecondar:{
+    color: gray,
+    fontSize: 14,
+    fontWeight: "500",
   },
   fr:{
     flexDirection: 'row',

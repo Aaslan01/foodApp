@@ -45,11 +45,12 @@ const Pizzas = () => {
               {item.name}
             </Text>
             <Text
-              style={{
-                color: StyleGuide.colors.gray,
-                paddingLeft: wp(4),
-                fontSize: 14,
-              }}>
+              style={[
+                StyleGuide.textSecondar,
+                {
+                  paddingLeft: wp(4),
+                },
+              ]}>
               Weight 540 gr
             </Text>
             <View
